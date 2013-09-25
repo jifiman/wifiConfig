@@ -10,4 +10,7 @@ A beagleboneblack running debian.
 http://eewiki.net/display/linuxonarm/BeagleBone+Black
 
 Installation:
+sudo apt-get install hostapd
+git clone https://github.com/jifiman/wifiConfig.git
+cd wifiConfig
 
