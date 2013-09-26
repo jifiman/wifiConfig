@@ -1,0 +1,40 @@
+<html>
+<head>
+    <style type="text/css">
+
+    </style>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js" type="text/javascript"></script>
+    <script type="text/javascript">
+
+        $(document).ready(function()
+        {
+            console.log("Ready");
+            $('#car').click(function()
+            {
+                console.log("Click");
+                $.getJSON('data.json',function(data)
+                {
+                    $('#content').empty();
+                    $.each(data, function(entryIndex, entry)
+                    {
+                        console.log("index "+entryIndex+" entry "+entry);
+                        /*var html = '<div class="data">';
+                        html += '<h3>' + entry['company'] + '</h3>';
+                        html += '<div class="product">' + entry['product'] + '</div>';
+                        html += '<div class="type">' + entry['type'] + '</div>';
+                        $('#content').append(html);  */
+                    });
+                });
+                return false;
+            });
+        });
+    </script>
+</head>
+<body>
+
+<a href="#" id="car">Car</a>
+<div id="content">
+</div>
+</body>
+</html>
+

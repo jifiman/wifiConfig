@@ -1,11 +1,20 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title></title>
+    <script src="http://ajax.aspnetcdn.com/ajax/jquery/jquery-1.9.0.min.js"></script>
+    <script>
+        // Fallback to loading jQuery from a local path if the CDN is unavailable
+        (window.jQuery || document.write('<script src="jquery-1.9.0.min.js"><\/script>'));
+    </script>
+
+
+    <script src="adhoc.js"></script>
+
+    <title>Configure wifi network</title>
 </head>
 <body>
     <select id="selectNumber">
-        <option>Choose a network</option>
+        <option>Choose a wifi network</option>
     </select>
 </body>
 </html>
